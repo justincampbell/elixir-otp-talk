@@ -26,8 +26,7 @@ defmodule Spyfall do
 
   defp randomize_spy(state) do
     spy = state.players
-          |> Enum.shuffle
-          |> Enum.take(1)
+          |> Enum.random
     %{state | spy: spy}
   end
 end
